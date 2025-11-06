@@ -23,7 +23,7 @@ export class MCPExecutorError extends Error {
     message: string,
     public readonly category: ErrorCategory,
     public readonly context?: Record<string, unknown>,
-    public readonly cause?: Error
+    public override readonly cause?: Error
   ) {
     super(message);
     this.name = 'MCPExecutorError';

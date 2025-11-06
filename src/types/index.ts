@@ -4,6 +4,15 @@
 
 // Re-export error types
 export * from './errors.js';
+
+// Re-export MCP module
+export * from '../mcp/index.js';
+
+// Re-export Bridge module
+export * from '../bridge/index.js';
+
+// Re-export Runtime module
+export * from '../runtime/index.js';
 import type { ExecutionError, GenerationError } from './errors.js';
 
 /**
@@ -40,7 +49,7 @@ export interface ToolSchema {
   /** JSON Schema defining the expected input parameters */
   inputSchema: JSONSchema;
   /** Optional JSON Schema defining the expected output format */
-  outputSchema?: JSONSchema;
+  outputSchema?: JSONSchema | undefined;
   /** ID of the MCP server that provides this tool */
   serverId: string;
 }

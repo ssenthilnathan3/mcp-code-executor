@@ -13,8 +13,8 @@ import {
   validateJSONSchema,
   validateToolSchema,
   validateNamespaceDefinition
-} from './validation.js';
-import { ValidationError } from '../types/errors.js';
+} from '../../src/utils/validation.js';
+import { ValidationError } from '../../src/types/errors.js';
 
 describe('validateMCPServerConfig', () => {
   it('should validate a valid server config', () => {

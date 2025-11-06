@@ -161,15 +161,24 @@ console.log('Result:', result.result);
 ### Project Structure
 
 ```
-src/
-├── mcp/          # MCP server connections and schema handling
-├── generator/    # TypeScript API generation
-├── bridge/       # API call interception and routing  
-├── runtime/      # Deno sandbox execution
-├── utils/        # Shared utilities
-├── cli/          # Command-line interface
-└── index.ts      # Main library entry point
+src/                    # Source code
+├── mcp/               # MCP server connections and schema handling
+├── generator/         # TypeScript API generation
+├── bridge/            # API call interception and routing  
+├── runtime/           # Deno sandbox execution
+├── types/             # Type definitions and interfaces
+├── utils/             # Shared utilities
+└── cli/               # Command-line interface
+
+tests/                 # Test files (mirrors src structure)
+├── mcp/               # MCP layer tests
+├── generator/         # Code generation tests
+├── bridge/            # Bridge layer tests
+├── runtime/           # Runtime execution tests
+└── utils/             # Utility function tests
 ```
+
+For detailed folder structure documentation, see [FOLDER_STRUCTURE.md](./FOLDER_STRUCTURE.md).
 
 ### Scripts
 
